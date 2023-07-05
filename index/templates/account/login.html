@@ -1,0 +1,53 @@
+{% extends "account/base.html" %}
+{% load static %}
+
+
+{% block head_title %}Login{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="auth-container">
+    <div class="auth-container2">
+
+      
+      <div class="left">
+        <img src="{% static 'images/background-pink.png' %}" alt="">
+        <div class="text-container">
+          <h2> <strong>Seja muito</strong>  <br> BEM VINDO</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis</p>
+        </div>
+      </div>
+      
+      
+      <div class="right">
+        <img src="{% static 'images/logo-dark.png' %}" alt="">
+        <h1>LOGIN</h1>
+    
+        <form class="login" method="POST" action="{% url 'account_login' %}">
+          {% csrf_token %}
+          {% for field in form %}
+          <div class="form-group">
+            {{ field }}
+          </div>
+          {% endfor %}
+          <a class="button secondaryAction" href="{% url 'account_reset_password' %}">Forgot Password?</a>
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+          <button class="submit-form" type="submit">LOGIN</button>
+        </form>
+        <p class="redirect-login redirect-signup" >Possui uma conta? faca <a href="{% url 'account_signup' %}">cadastre-se</a></p>
+      </div>
+
+
+    </div>
+  </div>
+
+
+</div>
+
+
+
+{% endblock %}

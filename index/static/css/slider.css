@@ -1,0 +1,98 @@
+/* SLIDER */
+section.slider{
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-content{
+    width: 400%;
+    height: auto;
+    display: flex;
+}
+
+.slider-content input, .img-mobile{
+    display: none;
+}
+
+.slide-box{
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+    
+}
+
+.slide-box img{
+    width: 100%;
+}
+
+.nav-manual, .nav-auto{
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-manual .manual-btn, .nav-auto div{
+    border: 1px solid #fff;
+    padding: 2px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+    margin-right: 50px;
+}
+
+.nav-manual .manual-btn:hover{
+    background-color: #fff;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1, #radio2:checked ~ .nav-auto .auto-btn2, #radio3:checked ~ .nav-auto .auto-btn3{
+    background-color: #fff;
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+}
+
+
+
+.content{
+    color: white;
+}
+
+.next-btn, .previous-btn{
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    margin: 0 50px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 30px;
+    bottom: 0;
+    top: 0;
+    margin: auto 0;
+}
+.next-btn{
+    right: 10px;
+}
+.previous-btn{
+    left: 10px;
+}

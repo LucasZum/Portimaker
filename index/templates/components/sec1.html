@@ -1,0 +1,116 @@
+{% load static %}
+<div class="sec1">
+    <section class="slider">
+        <div class="slider-content">
+            {% include 'components/header.html' %}
+            
+            <input type="radio" name="btn-radio" id="radio1">
+            <input type="radio" name="btn-radio" id="radio2">
+            <input type="radio" name="btn-radio" id="radio3">
+            
+            <div class="slide-box primeiro">
+                
+                <div class="content content1">
+                    
+                    <div class="title-container">
+                        <h2>COLISEUM</h2>
+                        <p>LOREM IPSUM ADGOLL <br> HOMINES PIMBERS</p>
+                        <div class="avaliation">
+                            <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="{% static 'images/coliseum.png' %}" alt="">
+                    </div>
+                    <div class="description-container">
+                        <h2>0.0023 BTC</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique odio nihil natus eos assumenda itaque modi iste numquam ad</p>
+                        <a href=" {% url 'create_page' 'coliseum' %} ">
+                            <button><i class="fa-sharp fa-solid fa-plus" style="color: #ffffff;"></i></button>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="slide-box">
+                <div class="content content2">
+                    <div class="title-container">
+                        <h2>FORTRESS</h2>
+                        <p>LOREM IPSUM ADGOLL <br> HOMINES PIMBERS</p>
+                        <div class="avaliation">
+                            <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="{% static 'images/tower.png' %}" alt="">
+                    </div>
+                    <div class="description-container">
+                        <h2>0.0023 BTC</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique odio nihil natus eos assumenda itaque modi iste numquam ad</p>
+                        <a href="{% url 'create_page' 'fortress' %}">
+                            <button><i class="fa-sharp fa-solid fa-plus" style="color: #ffffff;"></i></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide-box">
+                <div class="content content3">
+                    <div class="title-container">
+                        <h2>PYRAMID</h2>
+                        <p>LOREM IPSUM ADGOLL <br> HOMINES PIMBERS</p>
+                        <div class="avaliation">
+                            <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                            <i class="fa-solid fa-star" style="color: #ffffff;"></i>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="{% static 'images/pyramid.png' %}" alt="">
+                    </div>
+                    <div class="description-container">
+                        <h2>0.0023 BTC</h2>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique odio nihil natus eos assumenda itaque modi iste numquam ad</p>
+                        <a href="{% url 'create_page' 'pyramid' %}">
+                            <button><i class="fa-sharp fa-solid fa-plus" style="color: #ffffff;"></i></button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+            </div>
+
+            <div class="nav-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+            </div>
+
+                <button class="previous-btn" onclick="decrement()">
+                    <i class="fa-solid fa-chevron-left" style="color: #ffffff;"></i>
+                </button><button class="next-btn " onclick="proximaImg()">
+                    <i class="fa-solid fa-chevron-right" style="color: #ffffff;"></i>
+                </button>
+
+
+        </div>
+    </section>
+</div>
+
+
+

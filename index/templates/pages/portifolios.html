@@ -1,0 +1,85 @@
+{% extends 'layout.html' %}
+
+{% block title %}Portifólios | Portimaker{% endblock title %}
+
+{% block body %}
+
+{% if coliseum  %}
+<div class="portifolios-container">
+    <div class="title">
+        <h3>Type 1 </h3>
+    </div>
+    <div class="portifolios">
+        {% for portifolio in coliseum %}
+        <div class="portifolio">
+            {{ portifolio.title }}
+            <br>
+            {% if portifolio.public == True %}
+            <a href="{% url 'unpublish' 'coliseum' portifolio.id %}">
+                <button>DESPUBLICAR</button>
+            </a>
+            {% else %}
+            <a href="{% url 'publish' 'coliseum' portifolio.id %}">
+                <button>PUBLICAR</button>
+            </a>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<br><br><br><br>
+{% endif %}
+
+{% if fortress  %}
+<div class="portifolios-container">
+    <div class="title">
+        <h3>Type 2 </h3>
+    </div>
+    <div class="portifolios">
+        {% for portifolio in fortress %}
+        <div class="portifolio">
+            {{ portifolio.title }}
+            <br>
+            {% if portifolio.public == True %}
+            <a href="{% url 'unpublish' 'fortress' portifolio.id %}">
+                <button>DESPUBLICAR</button>
+            </a>
+            {% else %}
+            <a href="{% url 'publish' 'fortress' portifolio.id %}">
+                <button>PUBLICAR</button>
+            </a>
+            {% endif %}
+            
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<br><br><br><br>
+{% endif %}
+
+{% if pyramid  %}
+<div class="portifolios-container">
+    <div class="title">
+        <h3>Type 3 </h3>
+    </div>
+    <div class="portifolios">
+        {% for portifolio in pyramid %}
+        <div class="portifolio">
+            {{ portifolio.title }}
+            <br>
+            {% if portifolio.public == True %}
+            <a href="{% url 'unpublish' 'pyramid' portifolio.id %}">
+                <button>DESPUBLICAR</button>
+            </a>
+            {% else %}
+            <a href="{% url 'publish' 'pyramid' portifolio.id %}">
+                <button>PUBLICAR</button>
+            </a>
+            {% endif %}
+            
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+{% endblock body %}

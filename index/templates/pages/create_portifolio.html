@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block title %}Create | Portimaker{% endblock title %}
+
+{% block body %}
+    create portifolio ({{ model_id }})
+    <form method="POST" action="{% url 'create' model_id %}">
+        {% csrf_token %}
+        {{ form }}
+        <button>Create</button>
+    </form>
+{% endblock body %}

@@ -1,0 +1,52 @@
+{% extends "account/base.html" %}
+{% load static %}
+
+
+{% block head_title %}Cadastre-se{% endblock %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="auth-container">
+    <div class="auth-container2">
+
+      
+      <div class="left">
+        <img src="{% static 'images/background-pink.png' %}" alt="">
+        <div class="text-container">
+          <h2> <strong>Seja muito</strong>  <br> BEM VINDO</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed veritatis</p>
+        </div>
+      </div>
+      
+      
+      <div class="right">
+        <img src="{% static 'images/logo-dark.png' %}" alt="">
+        <h1>CADASTRE-SE</h1>
+    
+        <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+          {% csrf_token %}
+          {% for field in form %}
+          <div class="form-group">
+            {{ field }}
+          </div>
+        {% endfor %}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+          <button class="submit-form" type="submit">CADASTRAR</button>
+        </form>
+        <p class="redirect-login" >Possui uma conta? faca <a href="{% url 'account_login' %}">login</a></p>
+      </div>
+
+
+    </div>
+  </div>
+
+
+</div>
+
+
+
+{% endblock %}
